@@ -1,0 +1,18 @@
+path:
+  base_model: MLP-KTLim/llama-3-Korean-Bllossom-8B
+  data_path: llama3 finetuning/your_data/your_fine_tuning_data
+  save_path: llama3 finetuning/fine_tuned_model
+param:
+  test_size: 0.1
+  max_len: 2048
+  max_seq_length: 2048
+  evaluation_strategy: steps
+  eval_steps: 10
+  learning_rate: 1e-4
+  num_train_epochs: 3
+  weight_decay: 0.01
+  logging_steps: 10
+  per_device_train_batch_size: 2
+  per_device_eval_batch_size: 2
+  gradient_accumulation_steps: 16
+  fp16: True
